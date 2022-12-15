@@ -3,12 +3,11 @@ package com.dwogus6893.study_servlets;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class DatasInfor {
-    // function만듬
-    public HashMap<String,String> getSearchData(){
+public class DatasInfo {
+    public HashMap<String,String> getSearchFormData(){
         HashMap<String, String> searchForm = new HashMap<String,String>();
-        searchForm.put("search_key","search Title");
-        searchForm.put("name","요주의랩!");
+        searchForm.put("search_key", "Search Title");
+        searchForm.put("name","이재현");
         searchForm.put("id","ID0001");
         return searchForm;
     }
@@ -21,13 +20,14 @@ public class DatasInfor {
         return tablesListWithString ;
     }
 
-    public HashMap<String, Object> getBundlesData(){
-        DatasInfor datasInfor = new DatasInfor();
-        HashMap<String, String> searchForm = datasInfor.getSearchData();
-        ArrayList<String> tablesListWithString = datasInfor.getTablesListWithString();
+    public HashMap<String, Object> getBundleData(){
+        
+        DatasInfo datasInfo = new DatasInfo();
+        HashMap<String, String> searchForm = datasInfo.getSearchFormData();
+        ArrayList<String> tablesListWithString = datasInfo.getTablesListWithString();
 
         HashMap<String, Object> bundlesData = new HashMap<>();
-        bundlesData.put("searchForm",bundlesData);
+        bundlesData.put("searchForm",searchForm);
         bundlesData.put("tablesListWithString",tablesListWithString);
         return bundlesData;
     }
