@@ -5,7 +5,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import com.dwogus6893.study_servlets.DatasInfor;
+import com.dwogus6893.study_servlets.DatasInfo;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -20,8 +20,8 @@ public class TablesBundleServlets extends HttpServlet{
     throws ServletException, IOException{
         response.setContentType("text/html; charset=UTF-8");
         // 자바내용 import하기
-        DatasInfor datasInfor = new DatasInfor();
-        HashMap<String, Object> bundlesData = datasInfor.getBundlesData();
+        DatasInfo datasInfo = new DatasInfo();
+        HashMap<String, Object> bundlesData = datasInfo.getBundleData();
         HashMap<String, String> searchForm = (HashMap<String, String>) bundlesData.get("searchForm");
         ArrayList<String> tablesListWithString = (ArrayList<String>) bundlesData.get("tablesListWithString");
        

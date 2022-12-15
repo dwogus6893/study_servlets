@@ -14,12 +14,12 @@ public class FormsSelectsServlet extends HttpServlet{
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException{
     //PrintWriter는 client에게 값을 보내기위한 준비작업
     PrintWriter printWriter = response.getWriter();
-
     //기본부분
-    String title = "Select";
+    String message = "form selects";
+
     printWriter.println("<html lang='en'>");    
     printWriter.println("<head>");
-    printWriter.println("<title>"+title+"</title>");
+    printWriter.println("<title>"+message+"</title>");
     printWriter.println("<link href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css' rel='stylesheet'");
     printWriter.println("integrity='sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65' crossorigin='anonymous'>");
     printWriter.println("<link rel='stylesheet' href='./css/commons.css'>");

@@ -10,9 +10,10 @@ import jakarta.servlet.http.HttpServletResponse;
 
 //웹서버가 어떤 것을 실행해야하는지 알려주는 경로다
 @WebServlet(urlPatterns = "/helloWorldServlets")
+
 public class HelloWorldServlets extends HttpServlet {
 protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException{
-    String message = "Hello WolrdServlets with message";
+    String message = "Hello Wolrd Servlets with message!";
     PrintWriter printWriter =  response.getWriter();
 
     // http://localhost:8080/helloWorldServlets

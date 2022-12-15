@@ -5,7 +5,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-import com.dwogus6893.study_servlets.DatasInfor;
+import com.dwogus6893.study_servlets.DatasInfo;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
@@ -14,19 +14,19 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 @WebServlet(urlPatterns = "/tablesListServlets")
-public class TablesListServlets extends HttpServlet{
+public class TablesBeanListServlets extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException{
         response.setContentType("text/html; charset=UTF-8");
         // 자바내용 import하기
-        DatasInfor datasInfor = new DatasInfor();
-        ArrayList<String> tablesListWithString = datasInfor.getTablesListWithString();
+        DatasInfo datasInfo = new DatasInfo();
+        ArrayList<String> tablesListWithString = datasInfo.getTablesListWithString();
         // 자바내용 import하기 끝
         PrintWriter printWriter = response.getWriter();
 
 
-        HashMap<String, String> searchForm = datasInfor.getSearchData();
+        HashMap<String, String> searchForm = datasInfo.getSearchFormData();
         printWriter.println("<html lang='en'>");
         printWriter.println("<head>");
         printWriter.println("<title>"+searchForm.get("search_key")+"</title>");
