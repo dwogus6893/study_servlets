@@ -13,20 +13,19 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = "/tablesListServlets")
-public class TablesListServlets extends HttpServlet{
+@WebServlet(urlPatterns = "/tablesBundleServlets")
+public class TablesBundleServlets extends HttpServlet{
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
     throws ServletException, IOException{
         response.setContentType("text/html; charset=UTF-8");
         // 자바내용 import하기
         DatasInfor datasInfor = new DatasInfor();
-        ArrayList<String> tablesListWithString = datasInfor.getTablesListWithString();
-        // 자바내용 import하기 끝
+        HashMap<String, Object> bundlesData = datasInfor.getBundlesData();
+        HashMap<String, String> searchForm = (HashMap<String, String>) bundlesData.get("searchForm");
+        ArrayList<String> tablesListWithString = (ArrayList<String>) bundlesData.get("tablesListWithString");
+       
         PrintWriter printWriter = response.getWriter();
-
-
-        HashMap<String, String> searchForm = datasInfor.getSearchData();
         printWriter.println("<html lang='en'>");
         printWriter.println("<head>");
         printWriter.println("<title>"+searchForm.get("search_key")+"</title>");
