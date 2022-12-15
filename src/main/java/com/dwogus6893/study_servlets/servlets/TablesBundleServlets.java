@@ -22,9 +22,10 @@ public class TablesBundleServlets extends HttpServlet{
         // 자바내용 import하기
         DatasInfo datasInfo = new DatasInfo();
         HashMap<String, Object> bundlesData = datasInfo.getBundleData();
+        
         HashMap<String, String> searchForm = (HashMap<String, String>) bundlesData.get("searchForm");
         ArrayList<String> tablesListWithString = (ArrayList<String>) bundlesData.get("tablesListWithString");
-       
+        
         PrintWriter printWriter = response.getWriter();
         printWriter.println("<html lang='en'>");
         printWriter.println("<head>");
