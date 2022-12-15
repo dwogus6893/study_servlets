@@ -2,6 +2,7 @@ package com.dwogus6893.study_servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.HashMap;
 
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -10,12 +11,18 @@ import jakarta.servlet.http.HttpServletResponse;
 
 
 @WebServlet(urlPatterns = "/searchFormServlet")
+
 public class SearchFormServlet extends HttpServlet{
     //client에게 줄 부분 작성
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException{
+      //charset는 문자표 , 보내기직전에 이렇게 보내세요 세팅 
+       response.setContentType("text/html; charset=UTF-8");
         PrintWriter printWriter = response.getWriter();
-
-        String title = "Search";
+        
+        //DatasInfor.java 가져옴
+        DatasInfor datasInfor = new DatasInfor();
+        HashMap<String, String> searchFormData = datasInfor.getSearchDate();
+        String title = searchFormData.get("search_key");
         printWriter.println("<html lang='en'>");
 
         printWriter.println("<head>");
@@ -28,7 +35,7 @@ public class SearchFormServlet extends HttpServlet{
         printWriter.println("<body>");
         printWriter.println("<form action=''>");
         printWriter.println("<div class='container'>");
-        printWriter.println("<div class='fs-3'>Search Form</div>");
+        printWriter.println("<div class='fs-3'>Search Form - " + searchFormData.get("name")+"</div>");
         printWriter.println("<div>");
         printWriter.println("<label for='' class='form-label'>Search with Name</label>");
         printWriter.println("<input type='text' class='form-control' placeholder='Input Name' name='' id=''>");
@@ -42,6 +49,7 @@ public class SearchFormServlet extends HttpServlet{
         
         printWriter.println("</html>");
           //자원 반납
-        printWriter.close();
+
+          printWriter.close();
         }      
     }
