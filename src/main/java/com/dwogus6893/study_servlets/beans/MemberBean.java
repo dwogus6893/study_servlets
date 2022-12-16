@@ -1,37 +1,32 @@
 package com.dwogus6893.study_servlets.beans;
 
 public class MemberBean {
-    protected String question;
-    protected String questions_uid;
-    protected String order;
+    protected String firstName;
+    protected String secondName;
+    protected String handleName;
 
-    //외부에서 접근하는 function, 값을 가져오는 get
-    
-    public MemberBean() {
-
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
     }
 
-    public String getQuestion(){
-        return this.question;
-    }
-    public String Questions_uid(){
-        return this.questions_uid;
-    }
-    public String getOrder(){
-        return this.order;
+    public String getFirstName() {
+        return this.firstName;
     }
 
-    
-    public void setQuestion(String question){
-        this.question = question;
+    public void setSecondName(String secondName) {
+        this.secondName = secondName;
     }
 
-    public void setQuestions_uid(String questions_uid){
-        this.questions_uid = questions_uid;
+    public String getSecondName() {
+        return this.secondName;
     }
 
-    public void setOrder(String order){
-        this.order = order;
+    public void setHandleName(String handleName) {
+        this.handleName = handleName;
+    }
+
+    public String getHandleName() {
+        return this.handleName;
     }
 
 }

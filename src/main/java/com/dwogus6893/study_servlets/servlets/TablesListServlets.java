@@ -21,7 +21,7 @@ public class TablesListServlets extends HttpServlet{
         response.setContentType("text/html; charset=UTF-8");
         // 자바내용 import하기
         DatasInfo datasInfo = new DatasInfo();
-        ArrayList<String> tablesListWithString = datasInfo.getTablesListWithString();
+        ArrayList<String> tablesListWithString = datasInfo.getTableListWithString();
         // 자바내용 import하기 끝
         PrintWriter printWriter = response.getWriter();
 

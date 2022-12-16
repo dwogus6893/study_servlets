@@ -20,7 +20,6 @@ public class SearchFormServlet extends HttpServlet{
        PrintWriter printWriter = response.getWriter();
                
        DatasInfo datasInfo = new DatasInfo();  //DatasInfo 다른 파일의 데이터의 가져오기 위해 인스턴스화
-       datasInfo.getSearchFormData();
        HashMap<String, String> searchFormData = datasInfo.getSearchFormData();
        String title = searchFormData.get("search_key");
 
