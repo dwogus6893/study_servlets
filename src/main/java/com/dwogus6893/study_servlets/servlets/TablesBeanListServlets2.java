@@ -15,25 +15,25 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 @WebServlet(urlPatterns = "/tablesBeanListServlets")
-public class TablesBeanListServlets extends HttpServlet {
+public class TablesBeanListServlets2 extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8"); // 응답을 보낼 때 한글이 깨지지 않게 해주는 것. 백엔드를 위한 것
 
         // 여기서부터 액션을 취하는 부분
-        DatasInfo datasInfo = new DatasInfo();
-        MemberBean memberBean = datasInfo.getDataWithMemberBean();
-        HashMap<String, Object> bundlesData = datasInfo.getBundleData();
+        DatasInfo datasInfo2 = new DatasInfo2();
+        MemberBean memberBean2 = datasInfo2.getDataWithMemberBean();
+        HashMap<String, Object> bundlesData = datasInfo2.getBundleData();
 
-        System.out.println(memberBean.getFirstName() + " " + memberBean.getSecondName()
-                + " " + memberBean.getHandleName());
+        System.out.println(memberBean2.getFirstName() + " " + memberBean2.getSecondName()
+                + " " + memberBean2.getHandleName());
 
         // 여기까지
 
         // 여기서부터는 Display영역
         PrintWriter printWriter = response.getWriter();
-        HashMap<String, String> searchForm = datasInfo.getSearchFormData();
+        HashMap<String, String> searchForm = datasInfo2.getSearchFormData();
 
         printWriter.println("<html lang='en'>");
         printWriter.println("<head>");
@@ -54,9 +54,9 @@ public class TablesBeanListServlets extends HttpServlet {
         // memberBean.getSecondName()
         // + " " + memberBean.getHandleName() + "</div>");
 
-        MemberBean memberBean2 = (MemberBean) bundlesData.get("dataWithMemberBean");
-        printWriter.println("<div class='fs-4'>" + memberBean2.getFirstName() + " " + memberBean2.getSecondName()
-                + " " + memberBean2.getHandleName() + "</div>");
+        MemberBean MemberBean2 = (MemberBean) bundlesData.get("dataWithMemberBean");
+        printWriter.println("<div class='fs-4'>" + MemberBean2.getFirstName() + " " + MemberBean2.getSecondName()
+                + " " + MemberBean2.getHandleName() + "</div>");
 
         printWriter.println("<table class='table'>");
         printWriter.println("<thead>");
@@ -72,13 +72,13 @@ public class TablesBeanListServlets extends HttpServlet {
         ArrayList<MemberBean> dataListWithMemberBean = (ArrayList<MemberBean>) bundlesData.get("dataListWithMemberBean");
 
         for(int i=0; i<dataListWithMemberBean.size();i++){
-            MemberBean MemberBean = dataListWithMemberBean.get(i);
+            MemberBean MemberBean2 = dataListWithMemberBean.get(i);
             printWriter.println("   <tr>");
             printWriter.println("       <th scope=>"+(i+1)+"</th>");
 
-            String handle = MemberBean.getHandleName();
-            printWriter.println("<td>"+memberBean.getFirstName()+"</td>");
-            printWriter.println("<td>"+memberBean.getSecondName()+"</td>");
+            String handle = MemberBean2.getHandleName();
+            printWriter.println("<td>"+MemberBean2.getFirstName()+"</td>");
+            printWriter.println("<td>"+MemberBean2.getSecondName()+"</td>");
             printWriter.println("       <td>"+handle+"</td>");
             printWriter.println("   </tr>");
         }
