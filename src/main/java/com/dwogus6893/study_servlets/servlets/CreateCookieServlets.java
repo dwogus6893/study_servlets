@@ -15,7 +15,7 @@ public class CreateCookieServlets extends HttpServlet{
 
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
-        response.setContentType("text/html; charset=UTF-8");        
+        response.setContentType("text/html; charset=UTF-8");//한글이 안깨지게 해줌        
 
         //Cookie
         Cookie cookie_first = new Cookie("firstName","Yoju");
