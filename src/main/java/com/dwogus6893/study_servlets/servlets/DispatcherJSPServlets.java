@@ -21,7 +21,7 @@ protected void doGet(HttpServletRequest request, HttpServletResponse response) t
         request.setAttribute("firstName","jaehyunlee");
         RequestDispatcher requestDispatcher =  request.getRequestDispatcher("/search_form.jsp");
         requestDispatcher.forward(request, response);
-
+    
         }
     }
         

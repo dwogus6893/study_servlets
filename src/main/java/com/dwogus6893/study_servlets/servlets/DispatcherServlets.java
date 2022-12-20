@@ -10,7 +10,8 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-//웹서버가 어떤 것을 실행해야하는지 알려주는 경로다
+    // 웹서버가 어떤 것을 실행해야하는지 알려주는 경로다
+    // post쓰면 눈에 안보임 , get쓰면 눈에 보임
 @WebServlet(urlPatterns = "/dispatcherServlets")
 public class DispatcherServlets extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
@@ -25,7 +26,7 @@ public class DispatcherServlets extends HttpServlet {
             RequestDispatcher requestDispatcher = request.getRequestDispatcher("/cookies/createServlets");
             requestDispatcher.forward(request, response);
         } else {
-            // normal display
+            // /normal display
             String message = "DispatcherServlets with Message !";
             PrintWriter printWriter =  response.getWriter();
 

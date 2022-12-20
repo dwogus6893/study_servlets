@@ -12,13 +12,21 @@
 </head>
 
 <body>
+    
+    <%! int day = 3; %>
     <form action=''>
         <div class='container'>
-            <div class='fs-3'>Search Form JSP</div>
+            <div class='fs-3'>Search Form</div>
             <div>
                 <label for='' class='form-label'>Search with Name</label>
                 <input type='text' class='form-control' placeholder='Input Name' name='' id=''>
             </div>
+            <% if(day == 1 || day == 7) {%>
+                <div>Today is Weekend ! <%= day %> </div>    
+            <% }  else {%>
+                <div> Today is not Weekend !  <%= day %> </div>    
+            <% } %>
+
         </div>
     </form>
     <script src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js'
