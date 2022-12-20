@@ -1,5 +1,5 @@
+<%-- (HttpServletRequest request, HttpServletResponse response) --%>
 <%@ page import="java.util.HashMap, java.util.ArrayList" %>
-
 <!DOCTYPE html>
 <html lang='en'>
 
@@ -14,13 +14,13 @@
 </head>
 
 <body>
-     <% 
-        HashMap<String, String> searchForm = (HashMap<String,String>)request.getAttribute("searchForm");
-        ArrayList<String> tablesListWithString = request.getAttribute("tablesListWithString");
-     %>
-
+    <%@ include file="navbars.jsp" %>
+    <% 
+        HashMap<String, String> searchForm = (HashMap<String, String>)request.getAttribute("searchForm"); 
+        ArrayList<String> tablesListWithString = (ArrayList<String>)request.getAttribute("tablesListWithString");
+    %>
     <div class='container'>
-        <div class='fs-3'>Tables Normal <%= searchForm.get("search_key") %>   </div>
+        <div class='fs-3'>Tables Normal <%= searchForm.get("search_key") %></div>
         <table class='table'>
             <thead>
                 <tr>
@@ -29,7 +29,7 @@
                 </tr>
             </thead>
             <tbody>
-            <%for(int i=0; i<tablesListWithString.size();i++){ %>
+            <% for(int i=0; i<tablesListWithString.size(); i++){ %>
                 <tr>
                     <th scope=><%= (i+1) %></th>
                     <td><%= tablesListWithString.get(i) %></td>
@@ -44,3 +44,8 @@
 </body>
 
 </html>
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
+Privacy
