@@ -1,3 +1,5 @@
+<%@ page import="java.util.HashMap, java.util.ArrayList" %>
+
 <!DOCTYPE html>
 <html lang='en'>
 
@@ -12,24 +14,27 @@
 </head>
 
 <body>
+     <% 
+        HashMap<String, String> searchForm = (HashMap<String,String>)request.getAttribute("searchForm");
+        ArrayList<String> tablesListWithString = request.getAttribute("tablesListWithString");
+     %>
+
     <div class='container'>
-        <div class='fs-3'>Tables Normal</div>
+        <div class='fs-3'>Tables Normal <%= searchForm.get("search_key") %>   </div>
         <table class='table'>
             <thead>
                 <tr>
                     <th scope=>#</th>
-                    <th scope=>First</th>
-                    <th scope=>Last</th>
                     <th scope=>Handle</th>
                 </tr>
             </thead>
             <tbody>
+            <%for(int i=0; i<tablesListWithString.size();i++){ %>
                 <tr>
-                    <th scope=>1</th>
-                    <td>Mark</td>
-                    <td>Otto</td>
-                    <td>@mdo</td>
+                    <th scope=><%= (i+1) %></th>
+                    <td><%= tablesListWithString.get(i) %></td>
                 </tr>
+            <% } %>
             </tbody>
         </table>
     </div>
