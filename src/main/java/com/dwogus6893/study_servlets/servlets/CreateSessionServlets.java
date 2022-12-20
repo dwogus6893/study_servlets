@@ -28,8 +28,9 @@ public class CreateSessionServlets extends HttpServlet{
         PrintWriter printWriter = response.getWriter();
         printWriter.println("<div>Create Session Servlets</div>");
 
+        //상수를 먼저쓰면 에러 해결가능
         // loin
-        if(username.equals("yojulab") && password.equals("1234")){
+        if("yojulab".equals(username) && "1234".equals(password)){
            HttpSession httpSession =  request.getSession();
            httpSession.setAttribute ("username", httpSession);
            httpSession.setAttribute ("password", password);
