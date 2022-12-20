@@ -13,6 +13,9 @@ import jakarta.servlet.http.HttpServletResponse;
 
 public class HelloWorldServlets extends HttpServlet {
 protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException{
+   String firstName = request.getParameter("firstName");
+   String secondName = request.getParameter("secondName");
+
     String message = "Hello Wolrd Servlets with message!";
     PrintWriter printWriter =  response.getWriter();
 
