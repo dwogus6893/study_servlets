@@ -11,7 +11,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
 
-
+// 받아서 로그인 한 상태면 세션 만들고 로그인 안된 상태면 세션 만들지 X
 // /session/createServlet?username=yojub@password=1234
 @WebServlet(urlPatterns="/session/getServlets")
 public class GetSessionServlets extends HttpServlet{
@@ -24,12 +24,14 @@ public class GetSessionServlets extends HttpServlet{
        PrintWriter printWriter = response.getWriter();
        printWriter.println("<div>Create Session Servlets</div>");
 
-       // loin
+       // login
        HttpSession httpSession =  request.getSession();
        String username = (String) httpSession.getAttribute("username");
        String password = (String) httpSession.getAttribute("password");
        
+       // request로 들어오는 값은 null 체크를 꼭 해줘야 함
        printWriter.println("<div>"+username+","+password+"</div>");
+      
        printWriter.close();
 
     }

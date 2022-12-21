@@ -20,9 +20,12 @@ public class DispatcherJSPTablesListServlets extends HttpServlet{
     protected void doGet(HttpServletRequest request, HttpServletResponse response) 
         throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        
         DatasInfo datasInfo = new DatasInfo();
         ArrayList<String> tablesListWithString = datasInfo.getTableListWithString();
         HashMap<String, String> searchForm = datasInfo.getSearchFormData();
+        
+        // setAttribute는 object를 넣기 때문에 jsp에서 뺄 때 캐스팅 해줘야 함
         request.setAttribute("tablesListWithString", tablesListWithString);
         request.setAttribute("searchForm", searchForm);
 
