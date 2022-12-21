@@ -20,6 +20,7 @@ public class CreateCookieServlets extends HttpServlet{
         //Cookie
         Cookie cookie_first = new Cookie("firstName","Yoju");
         Cookie cookie_second = new Cookie("SecondName","Lab");
+        
         response.addCookie(cookie_first);
         response.addCookie(cookie_second);
 

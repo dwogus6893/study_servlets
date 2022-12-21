@@ -15,9 +15,10 @@ import jakarta.servlet.http.HttpServletResponse;
 
 public class DispatcherJSPServlets extends HttpServlet {
 protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException{
-   String hiddenParam = request.getParameter("hiddenParam");
+        // 히든파라메터의 값에 따라 분기하기
+        String hiddenParam = request.getParameter("hiddenParam");
 
-    
+
         request.setAttribute("firstName","jaehyunlee");
         RequestDispatcher requestDispatcher =  request.getRequestDispatcher("/search_form.jsp");
         requestDispatcher.forward(request, response);
