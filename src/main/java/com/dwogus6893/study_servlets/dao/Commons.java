@@ -12,10 +12,10 @@ import java.util.Date;
 public class Commons {
     // statement 만드는 펑션
     public Statement getStatement(){
-        String url = "jdbc:mysql://localhost:3306/toys_JavaWithDB";
+        String url = "jdbc:mysql://localhost:3306/toys_JavaWithDB";        
         String user = "root";
         String password = "1q2w3e4r!@#";
-
+        System.out.println("DB CONNECTED!");
         Statement statement = null;
         try {
             Connection connection = DriverManager.getConnection(url, user, password);
