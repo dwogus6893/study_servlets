@@ -1,6 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ import="java.util.HashMap;" %>
-
+<%@ page import="java.util.HashMap" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,18 +11,19 @@
 </head>
 
 <body>
-<%
-HashMap<String, Object> question = HashMap<String, Object> request.getAttribute("question");
+<% 
+    HashMap<String, Object> question = (HashMap<String, Object>)request.getAttribute("question");
 %>
-<%= %>
-    <div> <a href="/polls/PollServlet?QUESTIONS_UID=Q1">Q1</a> /
-    <div> <a href="/polls/PollServlet?QUESTIONS_UID=Q2">Q2</a> /
-    <div> <a href="/polls/PollServlet?QUESTIONS_UID=Q3">Q3</a> /
-    <div> <a href="/polls/PollServlet?QUESTIONS_UID=Q4">Q4</a> /
-    <div> <a href="/polls/PollServlet?QUESTIONS_UID=Q5">Q5</a> 
+
+    <div> 
+        <a href="/polls/PollServlet?QUESTIONS_UID=Q1">Q1</a> / 
+        <a href="/polls/PollServlet?QUESTIONS_UID=Q2">Q2</a> /
+        <a href="/polls/PollServlet?QUESTIONS_UID=Q3">Q3</a> /
+        <a href="/polls/PollServlet?QUESTIONS_UID=Q4">Q4</a> /
+        <a href="/polls/PollServlet?QUESTIONS_UID=Q5">Q5</a>
     </div>
     <div>
-    <% = question.get("ORDERS") %>. <%= question.get("QUESTIONS")%>   
+        <%= question.get("ORDERS") %>. <%= question.get("QUESTIONS")%>
     </div>
     <div>
         (1) 전혀 아니다
