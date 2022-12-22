@@ -41,8 +41,6 @@ public class TablesBundleServlets extends HttpServlet{
         printWriter.println("<thead>");
         printWriter.println("<tr>");
         printWriter.println("<th scope=>#</th>");
-        //printWriter.println("<th scope=>First</th>");
-        //printWriter.println("<th scope=>Last</th>");
         printWriter.println("<th scope=>Handle</th>");
         printWriter.println("   </tr>");
         printWriter.println("</thead>");

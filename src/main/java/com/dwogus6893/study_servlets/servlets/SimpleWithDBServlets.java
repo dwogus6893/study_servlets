@@ -16,8 +16,8 @@ import jakarta.servlet.http.HttpServletResponse;
 @WebServlet(urlPatterns = "/simple/WithDBServlets")
 public class SimpleWithDBServlets extends HttpServlet {
     @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException, ServletException {
-        resp.setContentType("text/html;charset=UTF-8");
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+        response.setContentType("text/html;charset=UTF-8");
 
         // biz with DB
         SimpleWithDB simpleWithDB = new SimpleWithDB();
@@ -25,7 +25,7 @@ public class SimpleWithDBServlets extends HttpServlet {
 
         
         // display
-        PrintWriter printWriter = resp.getWriter();
+        PrintWriter printWriter = response.getWriter();
         printWriter.println("<div>SimpleWithDBServlets</div>");
         
         // buncle_list 묶음을 역으로 풀어서 웹에 출력하기

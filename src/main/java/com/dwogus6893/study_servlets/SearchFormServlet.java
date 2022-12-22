@@ -1,18 +1,4 @@
-/*
- http://localhost:8080/helloWorldServlets?firstName=Sanghun&secondName=Oh
 
-1)String firstName에 firstName 파라미터를 담는다.
-2)String secondName에 secondName 파라미터를 담는다.
-3)String message에 "Hello Wolrd Servlets with message!" 내용을 담는다.
-4)출력을 위해 PrintWriter 선언 후
-5)printWriter 출력때 message 내용 출력
-6)모든 출력이 끝나면 브라우저에 표기
-
-http://localhost:8080/searchFormServlet
-
-1)response.setContentType("text/html;charset=UTF-8"); 한국어가 안깨지게 넣어줌
-2)출력용으로 PrintWriter 선언 
- */
 
 
 

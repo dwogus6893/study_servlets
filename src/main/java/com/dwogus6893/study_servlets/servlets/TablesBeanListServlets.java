@@ -70,8 +70,9 @@ public class TablesBeanListServlets extends HttpServlet {
         printWriter.println("<tbody>");
 
         ArrayList<MemberBean> dataListWithMemberBean = (ArrayList<MemberBean>) bundlesData.get("dataListWithMemberBean");
+        
 
-        for(int i=0; i<dataListWithMemberBean.size();i++){
+            for(int i=0; i<dataListWithMemberBean.size();i++){
             MemberBean MemberBean = dataListWithMemberBean.get(i);
             printWriter.println("   <tr>");
             printWriter.println("       <th scope=>"+(i+1)+"</th>");
