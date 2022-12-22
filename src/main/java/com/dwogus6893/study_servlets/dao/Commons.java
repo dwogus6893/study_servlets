@@ -12,7 +12,7 @@ import java.util.Date;
 public class Commons {
     // statement 만드는 펑션
     public Statement getStatement(){
-        String url = "jdbc:mysql://localhost:3306/toys_javawithdb";
+        String url = "jdbc:mysql://localhost:3306/toys_JavaWithDB";
         String user = "root";
         String password = "1q2w3e4r!@#";
 
