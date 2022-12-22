@@ -43,8 +43,8 @@ public class SearchFormServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter printWriter = response.getWriter();
 
-        DatasInfo datasInfor = new DatasInfo();
-        HashMap<String, String> searchFormData = datasInfor.getSearchFormData();
+        DatasInfo datasInfo = new DatasInfo();
+        HashMap<String, String> searchFormData = datasInfo.getSearchFormData();
         String title = searchFormData.get("search_key");
         printWriter.println("<html lang='en'>");
 
