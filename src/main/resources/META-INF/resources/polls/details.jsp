@@ -24,12 +24,14 @@
     </div>
     <div>
         <%= question.get("ORDERS") %>. <%= question.get("QUESTIONS")%>
+        <%= question.get("ORDERS") %>. <%= question.get("QUESTIONS")%>
+        
     </div>
     <div>
         (1) 전혀 아니다
         (2) 아니다
         (3) 보통이다
-        으악
+        아 존나어렵다
     </div>
 </body>
 

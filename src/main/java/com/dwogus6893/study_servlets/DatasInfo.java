@@ -40,9 +40,9 @@ public class DatasInfo {
 
     public MemberBean getDataWithMemberBean() {
         MemberBean memberBean = new MemberBean();
-        memberBean.setFirstName("Mark");
-        memberBean.setSecondName("otto");
-        memberBean.setHandleName("@mdo");
+        memberBean.setFirstName("Mark-2022");
+        memberBean.setSecondName("otto-2022");
+        memberBean.setHandleName("@mdo-2022");
 
         return memberBean;
     }
@@ -50,21 +50,21 @@ public class DatasInfo {
     public ArrayList<MemberBean> getDataListWithMemberBean(){
         ArrayList<MemberBean> membersList = new ArrayList<>();
         MemberBean memberBean = new MemberBean();
-        memberBean.setFirstName("Mark");
-        memberBean.setSecondName("otto");
-        memberBean.setHandleName("@mdo");
+        memberBean.setFirstName("Mark1");
+        memberBean.setSecondName("otto1");
+        memberBean.setHandleName("@mdo1");
         membersList.add(memberBean);
 
         MemberBean memberBean02 = new MemberBean();
-        memberBean02.setFirstName("Mark");
-        memberBean02.setSecondName("otto");
-        memberBean02.setHandleName("@mdo");
+        memberBean02.setFirstName("Mark2");
+        memberBean02.setSecondName("otto2");
+        memberBean02.setHandleName("@mdo2");
         membersList.add(memberBean02);
 
         MemberBean memberBean03 = new MemberBean();
-        memberBean03.setFirstName("Mark");
-        memberBean03.setSecondName("otto");
-        memberBean03.setHandleName("@mdo");
+        memberBean03.setFirstName("Mark3");
+        memberBean03.setSecondName("otto3");
+        memberBean03.setHandleName("@mdo3");
         membersList.add(memberBean03);
         return membersList;    
     }

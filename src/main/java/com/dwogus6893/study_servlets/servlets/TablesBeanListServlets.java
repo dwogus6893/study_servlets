@@ -86,24 +86,6 @@ public class TablesBeanListServlets extends HttpServlet {
 
 
 
-
-
-
-
-
-
-
-
-        // for (int i = 0; i < tablesListWithString.size(); i++) {
-        // printWriter.println("<tr>");
-        // printWriter.println("<th scope=>" + (i + 1) + "</th>");
-        // // printWriter.println("<td>Mark</td>");
-        // // printWriter.println("<td>Otto</td>");
-        // String handle = tablesListWithString.get(i);
-        // printWriter.println("<td>" + handle + "</td>");
-        // printWriter.println("</tr>");
-        // }
-
         printWriter.println("</tbody>");
         printWriter.println("</table>");
         printWriter.println("</div>");
