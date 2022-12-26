@@ -1,5 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<%@ page import="java.util.HashMap" %>
+<%@ page import="java.util.HashMap, java.util.ArrayList" %>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -28,10 +28,18 @@
         
     </div>
     <div>
-        (1) 전혀 아니다
-        (2) 아니다
-        (3) 보통이다
-        아 존나어렵다
+        <%--요것은 선언 --%>
+        <%
+            ArrayList<HashMap> answer_list = null;
+            answer_list = (ArrayList<HashMap>)request.getAttribute("answer_list");
+        %>
+        <%
+            for(int i=0; i<answer_list.size(); i++){ 
+              HashMap<String,Object> answer =  answer_list.get(i);
+        %>
+            <div>(<%= answer.get("ORDERS") %>) <%= answer.get("EXAMPLE") %></div>
+        <% } %>
+        
     </div>
 </body>
 
