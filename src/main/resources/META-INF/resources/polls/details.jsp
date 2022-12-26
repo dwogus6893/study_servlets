@@ -24,7 +24,7 @@
     </div>
     <div>
         <%= question.get("ORDERS") %>. <%= question.get("QUESTIONS")%>
-        <%= question.get("ORDERS") %>. <%= question.get("QUESTIONS")%>
+        <%-- <%= question.get("ORDERS") %>. <%= question.get("QUESTIONS")%> --%>
         
     </div>
     <div>

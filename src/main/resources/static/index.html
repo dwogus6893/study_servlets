@@ -43,12 +43,14 @@
         <form action='/tablesBeanListServlets' method='get'>
             <button>tablesBeanListServlets</button>
         </form>
+
     </div>
     <div>
         <a href="/simple/WithDBServlets">/simple/WithDBServlets SimpleWithDBServlets.java</a>
     </div>
     <div>
-        <a href="/cookies/createServlets">/cookies/createServlets CreateCookieServlets.java</a>
+        <a href="/session/createServlets?username=yojulab&password=1234">/cookies/createServlets
+            CreateCookieServlets.java</a>
     </div>
     <div>
         <a href="/cookies/getAndDeleteServlets">/cookies/getAndDeleteServlets GetAndDeleteCookieServlets.java</a>
@@ -57,16 +59,26 @@
         <a href="/session/createServlets">/session/createServlets CreateSessionServlets.java</a>
     </div>
     <div>
-        <a href="/dispatcherServlets">/dispatcherServlets DispatcherJSPServlets.java</a>
+        <a href="/dispatcherServlets">/dispatcherServlets DispatcherServlets.java</a>
     </div>
     <div>
-        <a href="/dispatcherJSPServlets">/dispatcherJSPServlets DispatcherJSPServlets.java</a>
+        <a href="/dispatcherJSPServlets">/dispatcherJSPServlets DispatcherJSPServlets.java search_form.jsp</a>
+    </div>
+    <div>
+        <a href="/session/createServlets?username=yojulab&password=1234">/session/createServlets?username=yojulab&password=1234
+            CreateSessionServlets.java</a>
+    </div>
+    <div>
+        <form action='/session/createServlets' method='post'>
+            <input type='text' name='username' id='' value='yojulab'>
+            <input type='text' name='password' id='' value='1234'>
+            <button>/session/CreateServlets with post</button>
+        </form>
     </div>
     <div>Cases</div>
     <div>
         <a href="/polls/PollServlet?QUESTIONS_UID=Q1">DetailServlets.java /polls/details.jsp</a>
     </div>
-
 </body>
 
 </html>
