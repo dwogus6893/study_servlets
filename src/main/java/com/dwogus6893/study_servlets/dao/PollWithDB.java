@@ -6,6 +6,16 @@ import java.sql.Statement;
 import java.util.HashMap;
 
 public class PollWithDB {
+    public void getAnswer(String questionsUid){
+        // SELECT ANSWERS.QUESTIONS_UID, EXAMPLE_LIST.ORDERS, EXAMPLE_LIST.EXAMPLE 
+        // FROM ANSWERS 
+	    // INNER JOIN EXAMPLE_LIST 
+	    // ON ANSWERS.EXAMPLE_UID = EXAMPLE_LIST.EXAMPLE_UID 
+	    // WHERE QUESTIONS_UID = 'Q1'
+        // ORDER BY QUESTIONS_UID;
+        return 0;
+
+    }
     public HashMap<String, Object> getQuestion(String questionsUid) throws SQLException{
 
         Commons commons = new Commons();
