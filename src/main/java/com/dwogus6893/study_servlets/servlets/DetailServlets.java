@@ -30,6 +30,7 @@ public class DetailServlets extends HttpServlet {
             System.out.println(question.get("QUESTIONS_UID"));
             System.out.println(question.get("QUESTIONS"));
             System.out.println(question.get("ORDERS"));
+            pollWithDB.getAnswer(questions_Uid);
         } catch (SQLException e) {
             e.printStackTrace();
         }
